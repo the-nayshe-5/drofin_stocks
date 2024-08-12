@@ -46,8 +46,8 @@ def get_info(data, stocks):
 
 st.title("Welcome to Android Club Stocks Market! 📈")
 ticker = st.sidebar.text_input('Enter your answer here:', value="AAPL")
-start_date = datetime.date.today()-datetime.timedelta(days=2)
-end_date = datetime.date.today()
+start_date = datetime.date.today()-datetime.timedelta(days=3)
+end_date = datetime.date.today()-datetime.timedelta(days=1)
 period = "30m"
 
 
