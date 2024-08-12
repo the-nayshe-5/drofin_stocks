@@ -12,11 +12,12 @@ st.set_page_config(page_title="Home - DroFin",
 def get_data(ticker, start_date, end_date, period):
     data = yf.download(ticker, start = start_date, end = end_date, interval = period)
     stocks = yf.Ticker(ticker)
-    # st.write(data)
+    st.write(data)
     # col = st.selectbox('Select Option:', ["Open", "Close", "Adj Close"])
     col = "Open"
-    fig1 = px.line(data, x = data.index, y = data[col], title = ticker + " Stocks")
-    st.plotly_chart(fig1)
+    # fig1 = px.line(data, x = data.index, y = data[col], title = ticker + " Stocks")
+    # st.plotly_chart(fig1)
+    
     return [data, stocks]
 
 def get_info(data, stocks):
