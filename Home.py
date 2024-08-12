@@ -1,12 +1,12 @@
+!pip install plotly
+!pip install yfinance
+
 import streamlit as st
 import pandas as pd
 import numpy as np
 import plotly.express as px
 import yfinance as yf
 import datetime
-#---------------------------------------------------#
-    ## PAGE LAYOUT ##
-#---------------------------------------------------#
 
 st.set_page_config(page_title="Home - DroFin",
                    layout="wide",
