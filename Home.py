@@ -1,5 +1,4 @@
 import streamlit as st
-from streamlit_extras.stylable_container import stylable_container
 import pandas as pd
 import numpy as np
 import plotly.express as px
@@ -46,7 +45,7 @@ def get_info(data, stocks):
         st.write(f"Market Cap: {stocks.info['marketCap']}")
         st.write(f"P/E Ratio: {stocks.info['trailingPE']}")
 
-st.title("Welcome to Android Club Stocks Market!")
+st.title("Welcome to Android Club Stocks Market! 📈")
 ticker = st.sidebar.text_input('Enter your answer here:', value="AAPL")
 start_date = datetime.date.today()-datetime.timedelta(days=1)
 end_date = datetime.date.today()
