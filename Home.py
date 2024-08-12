@@ -48,7 +48,7 @@ ticker = st.sidebar.text_input('Enter your answer here:', value="AAPL")
 start_date = datetime.date.today()-datetime.timedelta(days=1)
 end_date = datetime.date.today()
 period = "30m"
-st.write(datetime.date.today())
+st.write("Date: ", datetime.date.today())
 try:
     data, stocks = get_data(ticker, start_date, end_date, period)
     pricing_data, balance_sheet, income_statement, cash_flow, other_info = st.tabs(["Pricing Data", "Balance Sheet", "Income Statement", 
