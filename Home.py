@@ -7,7 +7,7 @@ import datetime
 
 st.set_page_config(page_title="Home - DroFin",
                    layout="wide",
-                   page_icon="💰")
+                   page_icon="🤖")
 
 def get_data(ticker, start_date, end_date, period):
     data = yf.download(ticker, start = start_date, end = end_date, interval = period)
@@ -42,7 +42,7 @@ def get_info(data, stocks):
         st.write(f"Market Cap: {stocks.info['marketCap']}")
         st.write(f"P/E Ratio: {stocks.info['trailingPE']}")
 
-st.title("Welcome to Android Club Stocks Market! 📈")
+st.title("Welcome to Android Club Stocks Market! 🤖📈")
 st.write("Timezone: ", datetime.datetime.now().astimezone().tzinfo)
 ticker = st.sidebar.text_input('Enter your answer here:', value="AAPL")
 start_date = datetime.date.today()-datetime.timedelta(days=1)
