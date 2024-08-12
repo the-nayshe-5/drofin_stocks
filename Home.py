@@ -48,11 +48,18 @@ start_date = datetime.date.today()-datetime.timedelta(days=1)
 end_date = datetime.date.today()
 period = "30m"
 
-try:
-    data, stocks = get_data(ticker, start_date, end_date, period)
-    pricing_data, balance_sheet, income_statement, cash_flow, other_info = st.tabs(["Pricing Data", "Balance Sheet", "Income Statement", 
-                                                                  "Cash Flow", "More Info"])
-    get_info(data, stocks)
-except:
-    st.write("Enter Valid Details.")
+
+data, stocks = get_data(ticker, start_date, end_date, period)
+pricing_data, balance_sheet, income_statement, cash_flow, other_info = st.tabs(["Pricing Data", "Balance Sheet", "Income Statement", 
+                                                              "Cash Flow", "More Info"])
+get_info(data, stocks)
+
+
+# try:
+#     data, stocks = get_data(ticker, start_date, end_date, period)
+#     pricing_data, balance_sheet, income_statement, cash_flow, other_info = st.tabs(["Pricing Data", "Balance Sheet", "Income Statement", 
+#                                                                   "Cash Flow", "More Info"])
+#     get_info(data, stocks)
+# except:
+#     st.write("Enter Valid Details.")
 
