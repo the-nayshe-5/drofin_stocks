@@ -44,7 +44,7 @@ def get_info(data, stocks):
 
 st.title("Welcome to Android Club Stocks Market! 🤖📈")
 st.write("Timezone: ", datetime.datetime.now().astimezone().tzinfo)
-ticker = st.sidebar.text_input('Enter your answer here:', value="AAPL")
+ticker = st.text_input('Enter your answer here:', value="AAPL")
 start_date = datetime.date.today()-datetime.timedelta(days=1)
 end_date = datetime.date.today()
 period = "30m"
